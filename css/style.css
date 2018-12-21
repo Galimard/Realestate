@@ -1,0 +1,61 @@
+@font-face {
+    font-family: 'ACaslonPro-Regular';
+    src: url('../fonts/ACaslonPro-Regular.woff2') format('woff2');
+    src: url('../fonts/ACaslonPro-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ArialRoundedMTBold';
+    src: url('../fonts/arial rounded mt bold.woff2') format('woff2');
+    src: url('../fonts/ArialRoundedMTBold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Arial-BoldMT';
+    src: url('../fonts/Arial-BoldMT.woff2') format('woff2');
+    src: url('../fonts/Arial-BoldMT.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ArialMT';
+    src: url('../fonts/ArialMT.woff2') format('woff2');
+    src: url('../fonts/ArialMT.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MicrosoftNewTaiLu';
+    src: url('../fonts/ntailu.woff2') format('woff2');
+    src: url('../fonts/MicrosoftNewTaiLue.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MicrosoftSansSerif';
+    src: url('../fonts/ms sans serif.woff2') format('woff2');
+    src: url('../fonts/MicrosoftSansSerif.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+* {
+    outline: 1px solid red;
+}
+
+html, body {
+    font-size: 14px;
+    font-family: 'ArialMT', 'Arial', sans-serif;
+}
+
+.content {
+    width: 100%;
+    max-width: 1010px;
+    margin: 0 auto;
+}
