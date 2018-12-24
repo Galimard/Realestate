@@ -52,10 +52,134 @@
 html, body {
     font-size: 14px;
     font-family: 'ArialMT', 'Arial', sans-serif;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+select, button {
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    background: none;
+}
+
+ul, li {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type='checkbox'].visually-hidden,
+input[type='radio'].visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    -webkit-clip-path: inset(100%);
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 .content {
-    width: 100%;
     max-width: 1010px;
     margin: 0 auto;
+    padding: 0 30px;
+}
+
+/*--------------------------------------------------стили для header header-top-----------------------------------------------------*/
+
+.header__top {
+    background: #5389aa;
+    padding: 15px 0;
+}
+
+.header__logo {
+    display: inline-block;
+    width: 319px;
+    margin-right: 453px;
+    color: #ffffff;
+    font-family: "ACaslonPro-Regular", 'Arial', sans-serif;
+    font-size: 2rem;
+    line-height: 24px;
+    word-wrap: break-word;
+}
+
+.header__logo::before {
+    content: '';
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: url("../img/logo.png") center center no-repeat;
+}
+
+.header-logo__block {
+    display: inline-block;
+    margin-left: -25px;
+}
+
+.header-logo__text {
+    font-family: "MicrosoftNewTaiLu", 'Arial', sans-serif;
+    font-size: 1.15rem;
+    margin-left: 32px;
+}
+
+.header__tel {
+    display: inline-block;
+    color: #ffffff;
+    font-family: "ACaslonPro-Regular", 'Arial', sans-serif;
+    font-size: 1.7rem;
+}
+
+.header-tel__link {
+    display: inline-block;
+    color: #ffffff;
+}
+
+/*--------------------------------------------------стили для header header-menu---------------------------------------------------*/
+
+.header__menu {
+    background: #d7d7d7;
+    padding: 15px 0;
+}
+
+.header__menu nav {
+    display: inline-block;
+}
+
+.header-menu__list {
+    padding-left: 20px;
+}
+
+.header-menu-list__item {
+    display: inline-block;
+    margin-right: 40px;
+}
+
+.header-menu-list__item:last-child {
+    padding-left: 0;
+}
+
+.header-menu-list__link {
+    color: #3a5362;
+    font-family: "MicrosoftSansSerif", 'Arial', sans-serif;
+    font-size: 1.15rem;
 }
