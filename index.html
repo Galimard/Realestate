@@ -13,7 +13,7 @@
                 <a href="index.html" class="header__logo">
                     <span class="header-logo__block">Realestate Company</span><span class="header-logo__text header-logo__block">Lorem Ipsum dolor sit amet, consectetur</span>
                 </a>
-                <span class="header__tel">Call us: <a href="#" class="header-tel__link">(214) 227-7669</a></span>
+                <span class="header__tel">Call us: <a href="(214) 227-7669" class="header-tel__link">(214) 227-7669</a></span>
             </div>
         </div>
         <div class="header__menu">
@@ -68,9 +68,56 @@
                     </div>
                 </div>
                 <div class="carousel__dots"></div>
-                <!--<div class="tabs">-->
-                    <!--tabs-->
-                <!--</div>-->
+                <ul class="tabs">
+                    <li class="tabs__list-item">
+                        <input type="radio" name="tabs" id="tab-1" checked class="tabs__title-input">
+                        <label for="tab-1" class="tabs__title">Tenants</label>
+                        <div class="tabs__content">
+                            <span class="tabs-content__text">Address, Suburbs, Postcodes, or Regions</span>
+                            <form action="#" name="search-address" method="post" enctype="multipart/form-data" class="search-address">
+                                <input type="text" title="address" placeholder="Example: Wichita Falls, Texas 76301" class="search-address__input">
+                                <label><input type="checkbox" checked>Include surrounding suburbs</label>
+                                <span>Property type:</span>
+                                <select name="property" title="property">
+                                    <option>Select one</option>
+                                    <option>Select two</option>
+                                    <option>Select three</option>
+                                </select>
+                                <span>Bedrooms:</span>
+                                <select name="bedrooms" title="bedrooms">
+                                    <option>Select one</option>
+                                    <option>Select two</option>
+                                    <option>Select three</option>
+                                </select>
+                                <input type="button" value="Search">
+                            </form>
+                        </div>
+                    </li>
+                    <li class="tabs__list-item">
+                        <input type="radio" name="tabs" id="tab-2" class="tabs__title-input">
+                        <label for="tab-2" class="tabs__title">Oweners</label>
+                        <div class="tabs__content">
+                            <span class="tabs-content__text">Address, Suburbs, Postcodes, or Regions</span>
+                            <form action="#" name="search-address" method="post" enctype="multipart/form-data" class="search-address">
+                                <input type="text" title="address" placeholder="Example: Wichita Falls, Texas 76301" class="search-address__input">
+                                <label><input type="checkbox" checked>Include surrounding suburbs</label>
+                                <select name="property" title="property">
+                                    <option>Select one</option>
+                                    <option>Select two</option>
+                                    <option>Select three</option>
+                                </select>
+                                <span>Property type:</span>
+                                <select name="bedrooms" title="bedrooms">
+                                    <option>Select one</option>
+                                    <option>Select two</option>
+                                    <option>Select three</option>
+                                </select>
+                                <span>Bedrooms:</span>
+                                <input type="button" value="Search">
+                            </form>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
         <div class="services">

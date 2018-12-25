@@ -102,7 +102,7 @@ input[type='radio'].visually-hidden {
     padding: 0 30px;
 }
 
-/*--------------------------------------------------стили для header header-top-----------------------------------------------------*/
+/*--------------------------------------------------стили для header header-top--------------------------------------------------*/
 
 .header__top {
     background: #5389aa;
@@ -126,6 +126,7 @@ input[type='radio'].visually-hidden {
     width: 50px;
     height: 50px;
     background: url("../img/logo.png") center center no-repeat;
+    margin-left: -5px;
 }
 
 .header-logo__block {
@@ -151,7 +152,7 @@ input[type='radio'].visually-hidden {
     color: #ffffff;
 }
 
-/*--------------------------------------------------стили для header header-menu---------------------------------------------------*/
+/*--------------------------------------------------стили для header header-menu------------------------------------------------*/
 
 .header__menu {
     background: #d7d7d7;
@@ -254,7 +255,7 @@ input[type='radio'].visually-hidden {
     color: #ff7108;
 }
 
-/*-----------------------------------------------стили для main__search-property------------------------------------------------*/
+/*----------------------------------------------стили для carousel---------------------------------------------------------*/
 
 .main__search-property {
     padding: 15px 0 10px;
@@ -321,4 +322,113 @@ input[type='radio'].visually-hidden {
 
 .carousel__dots {
     height: 30px;
+}
+
+/*----------------------------------------------стили для tabs---------------------------------------------------------*/
+
+.tabs {
+    list-style-type: none;
+    position: relative;
+}
+
+.tabs__list-item  {
+    float: left;
+    font-family: "ArialRoundedMTBold", 'Arial', sans-serif;
+}
+
+.tabs__title {
+    background-color: #c2f2ed;
+    color: #4b83a6;
+    font-size: 1.6rem;
+    padding: 13px 18px;
+    border-radius: 15px 15px 0 0;
+    margin-right: 5px;
+}
+
+.tabs__title-input {
+    display: none;
+}
+
+.tabs__content {
+    display: none;
+    position: absolute;
+    top: 39px;
+    left: 0;
+    padding: 20px 40px;
+    width: 420px;
+    height: 350px;
+    border-radius: 0 15px 0 0;
+    overflow-y: auto;
+    background: linear-gradient(to bottom, #60a4ce, transparent);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'ArialMT', 'Arial', sans-serif;
+}
+
+.tabs__title-input:checked + .tabs__title {
+    background-color: #60a4ce;
+    color: #ffffff;
+}
+
+.tabs__title-input:checked ~ .tabs__content {
+    display: block;
+}
+
+.tabs-content__text {
+    display: inline-block;
+    color: #ffffff;
+    font-size: 1.15rem;
+    margin-bottom: 20px;
+}
+
+.search-address__input {
+    width: 339px;
+    height: 44px;
+    border: 3px solid #316e94;
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 0.11) 0%, rgba(0, 0, 0, 0.11) 100%);
+    border-radius: 8px;
+    color: #347095;
+    font-family: "MicrosoftSansSerif", 'Arial', sans-serif;
+    font-size: 1.2rem;
+    padding: 15px 0 15px 20px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.search-address__input:focus::-webkit-input-placeholder {
+    opacity:0;
+    -webkit-transition: opacity 0.5s;
+    -moz-transition: opacity 0.5s;
+    -ms-transition: opacity 0.5s;
+    -o-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+}
+
+.search-address__input:focus:-moz-placeholder {
+    opacity:0;
+    -webkit-transition: opacity 0.5s;
+    -moz-transition: opacity 0.5s;
+    -ms-transition: opacity 0.5s;
+    -o-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+}
+
+.search-address__input:focus::-moz-placeholder {
+    opacity:0;
+    -webkit-transition: opacity 0.5s;
+    -moz-transition: opacity 0.5s;
+    -ms-transition: opacity 0.5s;
+    -o-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+}
+
+.search-address__input:focus:-ms-input-placeholder {
+    opacity:0;
+    -webkit-transition: opacity 0.5s;
+    -moz-transition: opacity 0.5s;
+    -ms-transition: opacity 0.5s;
+    -o-transition: opacity 0.5s;
+    transition: opacity 0.5s;
 }
