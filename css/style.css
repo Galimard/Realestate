@@ -46,15 +46,12 @@
     font-style: normal;
 }
 * {
-    outline: 1px solid red;
+    /*outline: 1px solid red;*/
 }
 
 html, body {
     font-size: 14px;
     font-family: 'ArialMT', 'Arial', sans-serif;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
 }
 
 body {
@@ -255,4 +252,73 @@ input[type='radio'].visually-hidden {
 
 .header-menu__link:hover {
     color: #ff7108;
+}
+
+/*-----------------------------------------------стили для main__search-property------------------------------------------------*/
+
+.main__search-property {
+    padding: 15px 0 10px;
+    background: linear-gradient(45deg, #316c92, #3686b8, #2d6990);
+}
+
+.carousel, .slick-track {
+    width: 508px;
+    height: 340px;
+}
+
+.carousel__slide {
+    border: 10px solid #f2e8e8;
+
+}
+
+.carousel__slide2, .carousel__slide3 {
+    display: none;
+}
+
+.carousel-img__wrap {
+    width: 489px;
+    height: 253px;
+    overflow: hidden;
+}
+
+.carousel-img {
+    max-width: 100%;
+}
+
+.carousel-text__wrap {
+    position: relative;
+    background: #1a425a;
+    color: #ffffff;
+    font-size: 1.4rem;
+    width: 489px;
+    height: auto;
+    padding: 13px 20px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.carousel-text__wrap::before {
+    content: '';
+    display: inline-block;
+    width: 100%;
+    height: 1px;
+    background: #3686b8;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.carousel-text__text {
+    display: inline-block;
+}
+
+.carousel-text__desc {
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.carousel__dots {
+    height: 30px;
 }
