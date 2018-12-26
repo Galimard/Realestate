@@ -5,6 +5,8 @@
     <title>Realestate</title>
     <!--<link rel="stylesheet" href="css/lib.css">-->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="plugins/jQueryFormStyler-master/dist/jquery.formstyler.css">
+    <link rel="stylesheet" href="plugins/jQueryFormStyler-master/dist/jquery.formstyler.theme.css">
 </head>
 <body>
     <header class="header">
@@ -59,12 +61,14 @@
                             </div>
                         </div>
                         <div class="carousel__slide carousel__slide3">
-                            <div class="carousel-img__wrap">
-                                <img src="img/photo4.jpg" alt="photo" class="carousel-img">
-                            </div>
-                            <div class="carousel-text__wrap">
-                                <span class="carousel-text__text">Lorem ipsum dolor sit amet, consectetur adipisicing</span>
-                                <span class="carousel-text__desc carousel-text__text">We work with investors to make managing your investments easy!</span>
+                            <div class="carousel-slide__wrap">
+                                <div class="carousel-img__wrap">
+                                    <img src="img/photo4.jpg" alt="photo" class="carousel-img">
+                                </div>
+                                <div class="carousel-text__wrap">
+                                    <span class="carousel-text__text">Lorem ipsum dolor sit amet, consectetur adipisicing</span>
+                                    <span class="carousel-text__desc carousel-text__text">We work with investors to make managing your investments easy!</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -78,20 +82,22 @@
                             <span class="tabs-content__text">Address, Suburbs, Postcodes, or Regions</span>
                             <form action="#" name="search-address" method="post" enctype="multipart/form-data" class="search-address">
                                 <input type="text" title="address" placeholder="Example: Wichita Falls, Texas 76301" class="search-address__input">
-                                <label><input type="checkbox" checked>Include surrounding suburbs</label>
-                                <span>Property type:</span>
-                                <select name="property" title="property">
-                                    <option>Select one</option>
-                                    <option>Select two</option>
-                                    <option>Select three</option>
-                                </select>
-                                <span>Bedrooms:</span>
-                                <select name="bedrooms" title="bedrooms">
-                                    <option>Select one</option>
-                                    <option>Select two</option>
-                                    <option>Select three</option>
-                                </select>
-                                <input type="button" value="Search">
+                                <label><input type="checkbox" checked class="search-property__checkbox"><span class="search-property__checkbox-text">Include surrounding suburbs</span></label>
+                                <div class="search-address__wrap-select">
+                                    <span class="search-property__text">Property type :</span>
+                                    <select name="property" title="property" class="select-property">
+                                        <option>Select one</option>
+                                        <option>Select two</option>
+                                        <option>Select three</option>
+                                    </select><br>
+                                    <span class="search-property__text">Bedrooms :</span>
+                                    <select name="bedrooms" title="bedrooms"  class="select-property">
+                                        <option>Select one</option>
+                                        <option>Select two</option>
+                                        <option>Select three</option>
+                                    </select>
+                                    <input type="button" value="Search">
+                                </div>
                             </form>
                         </div>
                     </li>
@@ -108,13 +114,13 @@
                                     <option>Select two</option>
                                     <option>Select three</option>
                                 </select>
-                                <span>Property type:</span>
+                                <span class="search-property__text">Property type:</span><br>
                                 <select name="bedrooms" title="bedrooms">
                                     <option>Select one</option>
                                     <option>Select two</option>
                                     <option>Select three</option>
                                 </select>
-                                <span>Bedrooms:</span>
+                                <span class="search-property__text">Bedrooms:</span>
                                 <input type="button" value="Search">
                             </form>
                         </div>
