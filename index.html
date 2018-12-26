@@ -36,39 +36,41 @@
     </header>
     <main class="main">
         <h1 class="visually-hidden">Realestate Company</h1>
-        <div class="main__search-property">
-            <div class="content">
-                <div class="carousel">
-                    <div class="carousel__slide carousel__slide1">
-                        <div class="carousel-img__wrap">
-                            <img src="img/photo1.jpg" alt="photo" class="carousel-img">
+        <div class="search-property">
+            <div class="content search-property__wrap">
+                <div class="search-property__slider">
+                    <div class="carousel">
+                        <div class="carousel__slide carousel__slide1">
+                            <div class="carousel-img__wrap">
+                                <img src="img/photo1.jpg" alt="photo" class="carousel-img">
+                            </div>
+                            <div class="carousel-text__wrap">
+                                <span class="carousel-text__text">Lorem ipsum dolor sit amet, consectetur adipisicing</span>
+                                <span class="carousel-text__desc carousel-text__text">We work with investors to make managing your investments easy!</span>
+                            </div>
                         </div>
-                        <div class="carousel-text__wrap">
-                            <span class="carousel-text__text">Lorem ipsum dolor sit amet, consectetur adipisicing</span>
-                            <span class="carousel-text__desc carousel-text__text">We work with investors to make managing your investments easy!</span>
+                        <div class="carousel__slide carousel__slide2">
+                            <div class="carousel-img__wrap">
+                                <img src="img/photo3.jpg" alt="photo" class="carousel-img">
+                            </div>
+                            <div class="carousel-text__wrap">
+                                <span class="carousel-text__text">Lorem ipsum dolor sit amet, consectetur adipisicing</span>
+                                <span class="carousel-text__desc carousel-text__text">We work with investors to make managing your investments easy!</span>
+                            </div>
+                        </div>
+                        <div class="carousel__slide carousel__slide3">
+                            <div class="carousel-img__wrap">
+                                <img src="img/photo4.jpg" alt="photo" class="carousel-img">
+                            </div>
+                            <div class="carousel-text__wrap">
+                                <span class="carousel-text__text">Lorem ipsum dolor sit amet, consectetur adipisicing</span>
+                                <span class="carousel-text__desc carousel-text__text">We work with investors to make managing your investments easy!</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="carousel__slide carousel__slide2">
-                        <div class="carousel-img__wrap">
-                            <img src="img/photo3.jpg" alt="photo" class="carousel-img">
-                        </div>
-                        <div class="carousel-text__wrap">
-                            <span class="carousel-text__text">Lorem ipsum dolor sit amet, consectetur adipisicing</span>
-                            <span class="carousel-text__desc carousel-text__text">We work with investors to make managing your investments easy!</span>
-                        </div>
-                    </div>
-                    <div class="carousel__slide carousel__slide3">
-                        <div class="carousel-img__wrap">
-                            <img src="img/photo4.jpg" alt="photo" class="carousel-img">
-                        </div>
-                        <div class="carousel-text__wrap">
-                            <span class="carousel-text__text">Lorem ipsum dolor sit amet, consectetur adipisicing</span>
-                            <span class="carousel-text__desc carousel-text__text">We work with investors to make managing your investments easy!</span>
-                        </div>
-                    </div>
+                    <div class="carousel__dots"></div>
                 </div>
-                <div class="carousel__dots"></div>
-                <ul class="tabs">
+                <ul class="search-property__tabs">
                     <li class="tabs__list-item">
                         <input type="radio" name="tabs" id="tab-1" checked class="tabs__title-input">
                         <label for="tab-1" class="tabs__title">Tenants</label>
@@ -97,10 +99,10 @@
                         <input type="radio" name="tabs" id="tab-2" class="tabs__title-input">
                         <label for="tab-2" class="tabs__title">Oweners</label>
                         <div class="tabs__content">
-                            <span class="tabs-content__text">Address, Suburbs, Postcodes, or Regions</span>
+                            <span class="tabs-content__text">Suburbs, Address, or Regions</span>
                             <form action="#" name="search-address" method="post" enctype="multipart/form-data" class="search-address">
                                 <input type="text" title="address" placeholder="Example: Wichita Falls, Texas 76301" class="search-address__input">
-                                <label><input type="checkbox" checked>Include surrounding suburbs</label>
+                                <label><input type="checkbox" checked class="search-property__checkbox"><span class="search-property__checkbox-text">Include surrounding suburbs</span></label>
                                 <select name="property" title="property">
                                     <option>Select one</option>
                                     <option>Select two</option>
