@@ -80,23 +80,23 @@
                         <label for="tab-1" class="tabs__title">Tenants</label>
                         <div class="tabs__content">
                             <span class="tabs-content__text">Address, Suburbs, Postcodes, or Regions</span>
-                            <form action="#" name="search-address" method="post" enctype="multipart/form-data" class="search-address">
-                                <input type="text" title="address" placeholder="Example: Wichita Falls, Texas 76301" class="search-address__input">
-                                <label><input type="checkbox" checked class="search-property__checkbox"><span class="search-property__checkbox-text">Include surrounding suburbs</span></label>
-                                <div class="search-address__wrap-select">
-                                    <span class="search-property__text">Property type :</span>
-                                    <select name="property" title="property" class="select-property">
-                                        <option>Select one</option>
-                                        <option>Select two</option>
-                                        <option>Select three</option>
-                                    </select><br>
-                                    <span class="search-property__text">Bedrooms :</span>
-                                    <select name="bedrooms" title="bedrooms"  class="select-property">
+                            <form action="#" name="search-address" method="post" enctype="multipart/form-data" class="search">
+                                <input type="text" title="address" placeholder="Example: Wichita Falls, Texas 76301" class="search__input">
+                                <label><input type="checkbox" checked class="search__checkbox"><span class="search__checkbox-text">Include surrounding suburbs</span></label>
+                                <div class="search-select__wrap">
+                                    <span class="search-select__text">Property type :</span>
+                                    <select name="property" title="property" class="search__select">
                                         <option>Select one</option>
                                         <option>Select two</option>
                                         <option>Select three</option>
                                     </select>
-                                    <input type="button" value="Search">
+                                    <span class="search-select__text">Bedrooms :</span>
+                                    <select name="bedrooms" title="bedrooms"  class="search__select">
+                                        <option>Select one</option>
+                                        <option>Select two</option>
+                                        <option>Select three</option>
+                                    </select>
+                                    <input type="button" value="Search" class="search-select__btn">
                                 </div>
                             </form>
                         </div>
@@ -106,22 +106,26 @@
                         <label for="tab-2" class="tabs__title">Oweners</label>
                         <div class="tabs__content">
                             <span class="tabs-content__text">Suburbs, Address, or Regions</span>
-                            <form action="#" name="search-address" method="post" enctype="multipart/form-data" class="search-address">
-                                <input type="text" title="address" placeholder="Example: Wichita Falls, Texas 76301" class="search-address__input">
-                                <label><input type="checkbox" checked class="search-property__checkbox"><span class="search-property__checkbox-text">Include surrounding suburbs</span></label>
-                                <select name="property" title="property">
-                                    <option>Select one</option>
-                                    <option>Select two</option>
-                                    <option>Select three</option>
-                                </select>
-                                <span class="search-property__text">Property type:</span><br>
-                                <select name="bedrooms" title="bedrooms">
-                                    <option>Select one</option>
-                                    <option>Select two</option>
-                                    <option>Select three</option>
-                                </select>
-                                <span class="search-property__text">Bedrooms:</span>
-                                <input type="button" value="Search">
+                            <form action="#" name="search-address" method="post" enctype="multipart/form-data" class="search">
+                                <input type="text" title="address" placeholder="Example: Wichita Falls, Texas 76301" class="search__input">
+                                <label><input type="checkbox" checked class="search__checkbox"><span class="search__checkbox-text">Include surrounding suburbs</span></label>
+                                <div class="search-select__wrap2">
+                                    <div class="search-select-text__wrap">
+                                        <select name="property" title="property" class="search__select search__select-tab2">
+                                            <option>Select one</option>
+                                            <option>Select two</option>
+                                            <option>Select three</option>
+                                        </select>
+                                        <span class="search-select__text">Property type:</span>
+                                    </div>
+                                    <select name="bedrooms" title="bedrooms" class="search__select search__select-tab2">
+                                        <option>Select one</option>
+                                        <option>Select two</option>
+                                        <option>Select three</option>
+                                    </select>
+                                    <span class="search-select__text">Bedrooms:</span>
+                                    <input type="button" value="Search" class="search-select__btn">
+                                </div>
                             </form>
                         </div>
                     </li>
@@ -129,10 +133,11 @@
             </div>
         </div>
         <div class="services">
-            <div class="services__item">
+            <div class="content services__wrap">
+                <div class="services__item"></div>
+                <div class="services__item"></div>
+                <div class="services__item"></div>
             </div>
-            <div class="services__item"></div>
-            <div class="services__item"></div>
         </div>
         <div class="items">
             <div class="item"></div>

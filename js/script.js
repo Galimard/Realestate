@@ -11,6 +11,6 @@ $(document).ready(function() {
     //     });
     // }
 
-    $('.select-property').styler();
+    $('.search__select').styler();
 
 });
