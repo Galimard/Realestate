@@ -534,21 +534,46 @@ input[type='radio'].visually-hidden {
 .services {
     background-image: linear-gradient(to top, #c2f2ed 0%, #c2f2ed 1%, #edfffd 100%);
     padding: 15px 0 16px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 160px;
 }
 
+/*выравнивание с помощью таблицы*/
 .services__wrap {
     text-align: justify;
-}
-
-.services__wrap::after {
-    content: '';
-    display: inline-block;
+    height: 100px;
+    display: table;
     width: 100%;
 }
 
 .services__item {
-    height: 100px;
-    width: 150px;
+    padding: 0 15px;
     border: 1px solid red;
+    display: table-cell;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.services-item__title {
+    color: #4484ad;
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+.services-item__title::before {
+    content: '';
     display: inline-block;
+    width: 32px;
+    height: 32px;
+    background: url("../img/home.png") center center no-repeat;
+}
+
+.services-item__text {
+    color: #43515a;
+    font-size: 0.95rem;
+    font-weight: 400;
+    margin: 0;
 }
