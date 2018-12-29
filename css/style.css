@@ -882,3 +882,27 @@ input[type='radio'].visually-hidden {
     background: url("../img/google +.png") center center no-repeat;
 }
 
+/*----------------------------------------------стили для footer---------------------------------------------------------*/
+
+.footer {
+    padding-top: 25px;
+    padding-bottom: 45px;
+    background: #4b7d9b;
+}
+
+.footer__wrap {
+    text-align: justify;
+}
+
+.footer__wrap::after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
+
+.footer__item {
+    outline: 1px solid red;
+    width: 100px;
+    height: 150px;
+    display: inline-block;
+}
