@@ -422,6 +422,7 @@ input[type='radio'].visually-hidden {
 
 .search-property__wrap {
     text-align: justify;
+    height: 399px;
 }
 
 .search-property__wrap::after {
@@ -948,11 +949,21 @@ input[type='radio'].visually-hidden {
     background: url("../img/google +.png") center center no-repeat;
 }
 
+.registration-icons__link:hover {
+    -webkit-filter: drop-shadow(0 0 3px #ffa25b);
+    filter: drop-shadow(0 0 3px #ffa25b);
+    -webkit-transition: filter 0.3s;
+    -moz-transition: filter 0.3s;
+    -ms-transition: filter 0.3s;
+    -o-transition: filter 0.3s;
+    transition: filter 0.3s;
+}
+
 /*----------------------------------------------стили для footer---------------------------------------------------------*/
 
 .footer {
     padding-top: 25px;
-    padding-bottom: 45px;
+    padding-bottom: 20px;
     background: #4b7d9b;
 }
 
