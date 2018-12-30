@@ -195,6 +195,7 @@ input[type='radio'].visually-hidden {
     content: '';
     display: inline-block;
     width: 100%;
+    margin-bottom: 13px;
 }
 
 .header-menu__navigation {
@@ -353,6 +354,7 @@ input[type='radio'].visually-hidden {
 }
 
 .tabs__list-item  {
+    height: 51px;
     float: left;
     font-family: "ArialRoundedMTBold", 'Arial', sans-serif;
     color: #ffffff;
@@ -365,9 +367,13 @@ input[type='radio'].visually-hidden {
     color: #4b83a6;
     font-family: "ArialRoundedMTBold", 'Arial', sans-serif;
     font-size: 1.6rem;
-    padding: 13px 18px;
+    padding: 12px 18px;
     border-radius: 15px 15px 0 0;
     margin-right: 5px;
+}
+
+.tabs__title:last-child {
+    margin-right: 0;
 }
 
 .tabs__title-input {
@@ -377,7 +383,7 @@ input[type='radio'].visually-hidden {
 .tabs__content {
     display: none;
     position: absolute;
-    top: 51px;
+    top: 49px;
     left: 0;
     padding: 20px 40px;
     width: 420px;
@@ -398,6 +404,15 @@ input[type='radio'].visually-hidden {
 
 .tabs__title-input:checked ~ .tabs__content {
     display: block;
+}
+
+.tabs__title:hover {
+    border-top: 2px solid #ffa765;
+    -webkit-transition: border-top-color 0.3s;
+    -moz-transition: border-top-color 0.3s;
+    -ms-transition: border-top-color 0.3s;
+    -o-transition: border-top-color 0.3s;
+    transition: border-top-color 0.3s;
 }
 
 .tabs-content__text {
@@ -523,7 +538,7 @@ input[type='radio'].visually-hidden {
 .search__select {
     width: 204px;
     height: 32px;
-    margin: 15px 0 8px 20px;
+    margin: 15px 0 5px 20px;
     text-align: left;
 }
 
@@ -532,20 +547,51 @@ input[type='radio'].visually-hidden {
 }
 
 .search-select__btn {
+    position: relative;
     display: inline-block;
     width: 204px;
+    height: 40px;
     border: 3px solid #d7d7d7;
-    background-image: linear-gradient(to top, #498ab2 0%, #6bb2dd 100%);
+    background: linear-gradient(to top, #498ab2 0%, #6bb2dd 100%);
     border-radius: 10px;
     color: #ffffff;
-    padding: 8px 0;
     font-size: 1.6rem;
     font-weight: 400;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    line-height: 1.6rem;
+    line-height: 35px;
+    margin-top: 30px;
+}
+
+.search-select__btn2 {
     margin-top: 35px;
+}
+
+.search-select__btn::after {
+    content: '';
+    display: inline-block;
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    width: 100px;
+    height: 100px;
+    outline: 1px solid red;
+    /*background-image: linear-gradient(to top, #ff6e02 0%, #ffa765 100%);*/
+    /*opacity: 0;*/
+    /*-webkit-transition: opacity 0.3s;*/
+    /*-moz-transition: opacity 0.3s;*/
+    /*-ms-transition: opacity 0.3s;*/
+    /*-o-transition: opacity 0.3s;*/
+    /*transition: opacity 0.3s;*/
+}
+
+.search-select__btn:hover {
+    cursor: pointer;
+}
+
+.search-select__btn:hover::after {
+    opacity: 1;
 }
 
 /*----------------------------------------------стили для services---------------------------------------------------------*/
@@ -676,7 +722,7 @@ input[type='radio'].visually-hidden {
 /*----------------------------------------------стили для registration---------------------------------------------------------*/
 
 .registration {
-    background: url("../img/bg_registr (1).jpg") center center;
+    background: url("../img/bg_registr(1).jpg") center center;
 }
 
 .registration__wrap {
