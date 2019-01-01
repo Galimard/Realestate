@@ -279,7 +279,7 @@ input[type='radio'].visually-hidden {
 
 .search-property {
     padding: 15px 0 0;
-    background: linear-gradient(45deg, #316c92, #3c94cb, #2d6990);
+    background: linear-gradient(45deg, #316c92, rgba(63, 155, 212, 0.81), #2d6990);
 }
 
 .carousel, .slick-track {
@@ -1189,4 +1189,123 @@ input[type='radio'].visually-hidden {
     color: #ffffff;
     font-size: 0.95rem;
     font-weight: 400;
+}
+
+/*---------------------------------------------------------адаптив-------------------------------------------------*/
+
+@media all and (max-width: 1020px) {
+
+    .items__wrap {
+        max-width: 715px;
+    }
+
+    .item:nth-child(4n) {
+        margin-right: 20px;
+    }
+
+    .item:nth-child(3n) {
+        margin-right: 0;
+    }
+
+    .item-text__wrap {
+        text-align: left;
+    }
+
+}
+
+@media all and (max-width: 1005px) {
+
+    .header-menu__navigation {
+        margin-left: -337px;
+    }
+
+    .registration__wrap {
+        max-width: 645px;
+        text-align: center;
+    }
+
+    .registration__signup {
+        margin-right: 0;
+        margin-bottom: 15px;
+        text-align: left;
+    }
+
+}
+
+@media all and (max-width: 993px) {
+
+    .header-menu__navigation {
+        margin-left: -267px;
+    }
+
+    .search-property__wrap {
+        text-align: center;
+        height: 786px;
+    }
+
+    .search-property__tabs {
+        margin-top: 30px;
+        text-align: left;
+    }
+
+    .services__item {
+        padding-right: 55px;
+    }
+}
+
+@media all and (max-width: 935px)  {
+
+    .header-menu__navigation {
+        margin-left: -207px;
+    }
+
+    .footer__logo {
+        width: 148px;
+    }
+
+}
+
+@media all and (max-width: 874px) {
+
+    .header-menu__navigation {
+        margin-left: 0;
+    }
+
+}
+
+@media all and (max-width: 775px) {
+
+    .items__wrap {
+        max-width: 468px;
+    }
+
+    .item:nth-child(4n) {
+        margin-right: 20px;
+    }
+
+    .item:nth-child(3n) {
+        margin-right: 20px;
+    }
+
+    .item:nth-child(2n) {
+        margin-right: 0;
+    }
+
+    .footer__wrap {
+        max-width: 500px;
+    }
+
+    .costamer, .company {
+        margin-top: 30px;
+    }
+
+    .properties {
+        margin-right: 73px;
+    }
+}
+
+@media all and (max-width: 737px) {
+
+
+
 }
