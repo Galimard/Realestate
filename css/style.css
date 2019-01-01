@@ -531,20 +531,25 @@ input[type='radio'].visually-hidden {
     height: 30px;
 }
 
+.search-select__row {
+    margin-top: 15px;
+}
+
 .search-select__text {
     display: inline-block;
     text-transform: capitalize;
+    vertical-align: middle;
 }
 
 .search__select {
     width: 204px;
     height: 32px;
-    margin: 15px 0 5px 20px;
+    margin-left: 20px;
     text-align: left;
 }
 
 .search__select-tab2 {
-    margin: 20px 20px 0 0;
+    margin: 0 20px 0 0;
 }
 
 .search-select__btn {
@@ -563,10 +568,6 @@ input[type='radio'].visually-hidden {
     box-sizing: border-box;
     line-height: 35px;
     margin-top: 30px;
-}
-
-.search-select__btn2 {
-    margin-top: 35px;
 }
 
 .search-select__btn::after {
