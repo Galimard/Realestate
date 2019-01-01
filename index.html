@@ -241,11 +241,25 @@
                    <button type="submit" class="registration-form__btn btn registration-form-email__btn"><span class="btn__span">Subscribe</span></button>
                    </form>
                </div>
-               <a href="#" class="registration__item registration__signup">
-                   <span>Text here</span>
+               <a href="#popup" class="registration__item registration__signup">
+                   <span>Not a member yet</span>
                </a>
                <div class="registration__item registration__icons">
                    <a href="#" class="registration-icons__link registration-icons__facebook"><span class="visually-hidden">facebook</span></a><a href="#" class="registration-icons__link registration-icons__twitter"><span class="visually-hidden">twitter</span></a><a href="#" class=" registration-icons__link registration-icons__google"><span class="visually-hidden">google+</span></a>
+               </div>
+               <div id="popup" class="registration__item registration__member registration__popup">
+                   <div class="popup__modal">
+                       <div class="popup__close">
+                           <span class="popup-close__line"></span><span class="popup-close__line"></span>
+                       </div>
+                       <span class="registration__text">Register now</span>
+                       <form action="#" name="login" method="post" enctype="multipart/form-data" class="registration__form">
+                           <input type="text" title="user name" placeholder="User name" class="registration-form__input">
+                           <input type="password" title="password" placeholder="Password" class="registration-form__input">
+                           <button type="submit" class="registration-form__btn btn"><span class="btn__span">Register</span></button>
+                       </form>
+                   </div>
+                   <div class="popup__overlay"></div>
                </div>
            </div>
         </div>
