@@ -117,7 +117,7 @@
 /* Dots */
 .slick-dotted.slick-slider
 {
-    margin-bottom: 30px;
+    /*margin-bottom: 15px;*/
 }
 
 .slick-dots
@@ -142,8 +142,8 @@
 
     display: inline-block;
 
-    width: 20px;
-    height: 20px;
+    width: 10px;
+    height: 10px;
     margin: 0 5px;
     padding: 0;
 
@@ -156,8 +156,8 @@
 
     display: block;
 
-    width: 20px;
-    height: 20px;
+    width: 10px;
+    height: 10px;
     padding: 5px;
 
     cursor: pointer;
@@ -188,9 +188,9 @@
     left: 0;
 
     border-radius: 50%;
-    background-color:  #7db122;
-    width: 11px;
-    height: 11px;
+    background-color:  #FFFFFF;
+    width: 10px;
+    height: 10px;
     /*width: 20px;*/
     /*height: 20px;*/
 
@@ -207,5 +207,5 @@
 {
     /*opacity: .75;*/
     /*color: black;*/
-    background-color:  #4cb1ca;
+    background-color: #2c5f7f;
 }

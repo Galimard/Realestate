@@ -278,7 +278,7 @@ input[type='radio'].visually-hidden {
 /*----------------------------------------------стили для carousel---------------------------------------------------------*/
 
 .search-property {
-    padding: 15px 0 10px;
+    padding: 15px 0 0;
     background: linear-gradient(45deg, #316c92, #3c94cb, #2d6990);
 }
 
@@ -340,9 +340,9 @@ input[type='radio'].visually-hidden {
     margin-top: 10px;
 }
 
-.carousel__dots {
-    height: 30px;
-}
+/*.carousel__dots {*/
+    /*height: 18px;*/
+/*}*/
 
 /*----------------------------------------------стили для tabs---------------------------------------------------------*/
 
@@ -387,7 +387,7 @@ input[type='radio'].visually-hidden {
     left: 0;
     padding: 20px 40px;
     width: 420px;
-    height: 350px;
+    height: 335px;
     border-radius: 0 15px 0 0;
     overflow-y: auto;
     background: linear-gradient(to bottom, #60a4ce, transparent);
@@ -422,7 +422,7 @@ input[type='radio'].visually-hidden {
 
 .search-property__wrap {
     text-align: justify;
-    height: 399px;
+    height: 385px;
 }
 
 .search-property__wrap::after {
