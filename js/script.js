@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    //
+
     // if($('.carousel')) {
     //     $('.carousel').slick({
     //         arrows: false,
@@ -13,4 +13,12 @@ $(document).ready(function() {
 
     $('.search__select').styler();
 
+    if($('.costamer__slider')) {
+        $('.costamer__slider').slick({
+            arrows: true,
+            appendArrows: $('.costamer-slider__arrows'),
+            infinite: true,
+            dots: false
+        });
+    }
 });
