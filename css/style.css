@@ -978,7 +978,7 @@ input[type='radio'].visually-hidden {
 }
 
 .footer__item {
-    /*outline: 1px solid red;*/
+    vertical-align: top;
     display: inline-block;
     overflow: hidden;
 }
@@ -1018,8 +1018,12 @@ input[type='radio'].visually-hidden {
     transform: translateX(-50%);
 }
 
-a:hover:after {
+.footer__link:hover:after {
     width: 100%;
+}
+
+.costamer {
+    height: 175px;
 }
 
 .costamer__slider{
@@ -1028,8 +1032,9 @@ a:hover:after {
 
 .costamer-slider__arrows {
     display: inline-block;
-    width: 100px;
-    height: 35px;
+    width: 60px;
+    height: 20px;
+    vertical-align: top;
 }
 
 .costamer-slider__title {
@@ -1088,6 +1093,10 @@ a:hover:after {
     transform: translateX(-50%);
 }
 
+.costamer__link:hover::after {
+    width: 100%;
+}
+
 .company {
     padding-left: 10px;
 }
@@ -1109,6 +1118,8 @@ a:hover:after {
 }
 
 .company__text {
+    display: inline-block;
+    margin-top: 35px;
     color: #ffffff;
     font-size: 0.95rem;
     font-weight: 400;
