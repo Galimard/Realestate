@@ -198,12 +198,16 @@ input[type='radio'].visually-hidden {
     margin-bottom: 13px;
 }
 
+.header-menu__hamburger {
+    display: none;
+}
+
 .header-menu__navigation {
     margin-left: -353px;
 }
 
 /*выравнивание с помощью псевдоэлемента*/
-.header-menu__wrap nav,
+.header-menu__navigation,
 .header-menu__login,
 .header-menu__list {
     display: inline-block;
@@ -1230,6 +1234,10 @@ input[type='radio'].visually-hidden {
         text-align: left;
     }
 
+    .registration__item {
+        text-align: left;
+    }
+
 }
 
 @media all and (max-width: 993px) {
@@ -1306,6 +1314,207 @@ input[type='radio'].visually-hidden {
 
 @media all and (max-width: 737px) {
 
+    .header-menu__hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-content: space-between;
+        position: relative;
+        width: 22px;
+        height: 20px;
+    }
 
+    .burger-line {
+        display: block;
+        cursor: pointer;
+        height: 4px;
+        width: 100%;
+        background-color: #3a5362;
+        border-radius: 2px;
+    }
 
+    .header-menu__hamburger:hover .burger-line:nth-child(2) {
+        display: none;
+    }
+
+    .header-menu__hamburger:hover .burger-line:first-child {
+        position: absolute;
+        top: 7px;
+        transform: rotate(45deg);
+        transition: 0.5s;
+    }
+
+    .header-menu__hamburger:hover .burger-line:last-child {
+        position: absolute;
+        top: 7px;
+        transform: rotate(-45deg);
+        transition: 0.5s;
+    }
+
+    .header-menu__navigation {
+        display: none;
+    }
+
+    .services-item__title {
+        font-size: 1.3rem;
+        padding-top: 5px;
+    }
+
+    .company__text {
+        margin-top: 10px;
+    }
+}
+
+@media all and (max-width: 620px) {
+
+    .content {
+        max-width: 500px;
+    }
+
+    .header-top__wrap {
+        text-align: center;
+    }
+
+    .logo {
+        text-align: left;
+    }
+
+    .header__tel {
+        margin-top: 20px;
+    }
+
+    .services__item {
+        padding-right: 15px;
+    }
+
+    .items__wrap {
+        text-align: center;
+    }
+}
+
+@media all and (max-width: 565px) {
+/*slider*/
+    .services__wrap {
+        height: auto;
+        display: inline-block;
+    }
+
+    .services__item {
+        display: inline-block;
+    }
+
+    .footer__wrap {
+        text-align: center;
+    }
+
+    .footer__item {
+        text-align: left;
+    }
+
+    .properties {
+        margin-right: 0;
+        margin-left: 130px;
+    }
+
+    .costamer {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+}
+
+@media all and (max-width: 528px) {
+
+    .item {
+        margin: 0 0 20px 0;
+    }
+
+    .item:nth-child(3n) {
+        margin-right: 0;
+    }
+    .registration__member, .registration__subscribe {
+        max-width: 470px;
+        min-height: 109px;
+    }
+}
+
+@media all and (max-width: 482px) {
+
+    html, body {
+        font-size: 10px;
+    }
+
+    .tabs__content {
+        width: 300px;
+        top: 40px;
+        padding: 10px 20px;
+    }
+
+    .search-property__tabs {
+        margin-right: 90px;
+    }
+
+    .search__input {
+        width: 260px;
+    }
+
+    .search__checkbox-text {
+        padding-top: 5px;
+    }
+
+    .search-select__text {
+        margin-bottom: 10px;
+    }
+
+    .search-select__text2 {
+        margin-bottom: 0;
+        margin-top: 10px;
+    }
+
+    .services__item {
+        padding-right: 55px;
+    }
+
+    .item-text__wrap span {
+        padding-right: 30px;
+    }
+
+    .item-text__wrap::after {
+        right: 3px;
+        top: 10px;
+        background-size: 20px;
+    }
+
+    .registration__member, .registration__subscribe {
+        max-width: 360px;
+        min-height: 133px;
+    }
+
+    .registration__signup {
+        max-width: 360px;
+    }
+
+    .registration-form__btn {
+        margin: 10px 110px 0;
+    }
+
+    .properties {
+        margin-left: 185px;
+    }
+
+    .costamer {
+        height: 120px;
+    }
+
+    .footer__link::after {
+        top: 12px;
+    }
+
+    .costamer__link::after {
+        top: 15px;
+    }
+
+    .company__text {
+        margin-top: 0;
+    }
 }
