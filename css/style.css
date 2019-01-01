@@ -915,11 +915,11 @@ input[type='radio'].visually-hidden {
 .registration__signup::before {
     content: 'Signup Now';
     display: inline-block;
-    width: 173px;
-    height: 46px;
+    width: 125px;
+    height: 25px;
     position: absolute;
     top: 10px;
-    right: -35px;
+    right: 14px;
     z-index: 10;
 }
 
@@ -1199,6 +1199,10 @@ input[type='radio'].visually-hidden {
 
 @media all and (max-width: 1020px) {
 
+    .services__wrap {
+        width: auto;
+    }
+
     .items__wrap {
         max-width: 715px;
     }
@@ -1401,6 +1405,7 @@ input[type='radio'].visually-hidden {
 
     .services__item {
         display: inline-block;
+        padding-right: 0;
     }
 
     .footer__wrap {
@@ -1444,6 +1449,14 @@ input[type='radio'].visually-hidden {
         font-size: 10px;
     }
 
+    .logo {
+        width: 227px;
+    }
+
+    .header__tel {
+        padding: 0 20px;
+    }
+
     .tabs__content {
         width: 300px;
         top: 40px;
@@ -1469,10 +1482,6 @@ input[type='radio'].visually-hidden {
     .search-select__text2 {
         margin-bottom: 0;
         margin-top: 10px;
-    }
-
-    .services__item {
-        padding-right: 55px;
     }
 
     .item-text__wrap span {
@@ -1516,5 +1525,89 @@ input[type='radio'].visually-hidden {
 
     .company__text {
         margin-top: 0;
+    }
+}
+
+@media all and (max-width: 420px) {
+
+    .registration__member, .registration__subscribe {
+        max-width: 300px;
+        text-align: center;
+    }
+
+    .registration__member {
+        min-height: 175px;
+    }
+
+    .registration__form {
+        text-align: center;
+    }
+
+    .registration-form__input {
+        margin-bottom: 10px;
+    }
+
+    .registration-form__btn {
+        margin: 0 80px;
+    }
+
+    .registration-form-input__email {
+        width: 252px;
+    }
+
+    .registration__signup {
+        max-width: 300px;
+    }
+
+    .registration__signup::before {
+        width: 90px;
+        right: 15px;
+    }
+
+    .registration__signup::after {
+        right: -35px;
+    }
+
+    .footer__logo {
+        width: 110px;
+    }
+}
+
+@media all and (max-width: 380px) {
+
+    .properties {
+        margin-left: 162px;
+    }
+}
+
+@media all and (max-width: 362px) {
+
+    .content {
+        padding: 0 10px;
+    }
+
+    .search-property__tabs {
+        margin-right: 85px;
+    }
+
+    .costamer__slider {
+        width: 259px;
+    }
+
+    .costamer, .company {
+        margin-top: 15px;
+    }
+
+    .properties {
+        margin-left: 122px;
+    }
+
+    .costamer {
+        height: 130px;
+    }
+
+    .registration__wrap {
+        padding-top: 15px;
+        padding-bottom: 15px;
     }
 }
