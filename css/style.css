@@ -552,22 +552,25 @@ input[type='radio'].visually-hidden {
     margin: 0 20px 0 0;
 }
 
-.search-select__btn {
+.btn {
     position: relative;
     display: inline-block;
-    width: 204px;
-    height: 40px;
     border: 3px solid #d7d7d7;
     background: linear-gradient(to top, #498ab2 0%, #6bb2dd 100%);
-    border-radius: 10px;
     color: #ffffff;
-    font-size: 1.6rem;
     font-weight: 400;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+}
+
+.search-select__btn {
+    width: 204px;
+    height: 40px;
     line-height: 35px;
     margin-top: 30px;
+    border-radius: 10px;
+    font-size: 1.6rem;
 }
 
 .btn__span {
@@ -575,16 +578,13 @@ input[type='radio'].visually-hidden {
     z-index: 100;
 }
 
-.search-select__btn::after {
+.btn::after {
     content: '';
     display: inline-block;
     position: absolute;
-    top: -2px;
-    left: -2px;
     width: 100%;
     height: 100%;
     border: 3px solid #d7d7d7;
-    border-radius: 10px;
     background-image: linear-gradient(to top, #ff6e02 0%, #ffa765 100%);
     opacity: 0;
     -webkit-transition: opacity 0.3s;
@@ -592,6 +592,12 @@ input[type='radio'].visually-hidden {
     -ms-transition: opacity 0.3s;
     -o-transition: opacity 0.3s;
     transition: opacity 0.3s;
+}
+
+.search-select__btn::after {
+    top: -2px;
+    left: -2px;
+    border-radius: 10px;
 }
 
 .search-select__btn:hover {
@@ -852,27 +858,18 @@ input[type='radio'].visually-hidden {
 .registration-form__btn {
     width: 90px;
     height: 32px;
-    border: 3px solid #d7d7d7;
     border-radius: 6px;
-    background: linear-gradient(to top, #498ab2 0%, #6bb2dd 100%);
-    color: #ffffff;
     font-size: 1.15rem;
-    -webkit-transition: background 0.3s;
-    -moz-transition: background 0.3s;
-    -ms-transition: background 0.3s;
-    -o-transition: background 0.3s;
-    transition: background 0.3s;
 }
 
-.registration-form__btn:hover {
-    cursor: pointer;
-    background: linear-gradient(to top, #ff6e02 0%, #ffa765 100%);
-    -webkit-transition: background 0.3s;
-    -moz-transition: background 0.3s;
-    -ms-transition: background 0.3s;
-    -o-transition: background 0.3s;
-    transition: background 0.3s;
+.registration-form__btn::after {
+    border-radius: 6px;
+    top: -3px;
+    left: -3px;
+}
 
+.registration-form__btn:hover::after {
+    opacity: 1;
 }
 
 .registration-form-input__email {
@@ -881,6 +878,11 @@ input[type='radio'].visually-hidden {
 
 .registration-form-email__btn {
     width: 105px;
+}
+
+.registration-form-email__btn::after {
+    top: -2px;
+    left: -2px;
 }
 
 .subscribe__text {
