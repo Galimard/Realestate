@@ -1524,6 +1524,10 @@ input[type='radio'].visually-hidden {
         padding: 10px 20px;
     }
 
+    .search-property__wrap {
+        height: 725px;
+    }
+
     .search-property__tabs {
         margin-right: 90px;
     }
