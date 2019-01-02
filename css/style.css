@@ -214,6 +214,10 @@ input[type='radio'].visually-hidden {
     vertical-align: middle;
 }
 
+.header-menu__navigation2 {
+    display: none;
+}
+
 .header-menu__wrap::before {
     content: '';
     display: inline-block;
@@ -259,7 +263,7 @@ input[type='radio'].visually-hidden {
 
 .header-menu-list__item--active {
     background: url("../img/tab.png") center 8px no-repeat;
-    z-index: 100;
+    z-index: 10;
 }
 
 .header-menu-list__item--active a {
@@ -288,12 +292,11 @@ input[type='radio'].visually-hidden {
 
 .carousel, .slick-track {
     width: 508px;
-    height: 340px;
+    height: 350px;
 }
 
 .carousel__slide {
     border: 10px solid #f2e8e8;
-
 }
 
 .carousel__slide2, .carousel__slide3 {
@@ -302,12 +305,14 @@ input[type='radio'].visually-hidden {
 
 .carousel-img__wrap {
     width: 489px;
+    max-width: 489px;
     height: 253px;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
 .carousel-img {
     max-width: 100%;
+    height: auto;
 }
 
 .carousel-text__wrap {
@@ -579,7 +584,7 @@ input[type='radio'].visually-hidden {
 
 .btn__span {
     position: relative;
-    z-index: 100;
+    z-index: 10;
 }
 
 .btn::after {
@@ -885,8 +890,8 @@ input[type='radio'].visually-hidden {
 }
 
 .registration-form-email__btn::after {
-    top: -2px;
-    left: -2px;
+    top: -3px;
+    left: -3px;
 }
 
 .subscribe__text {
@@ -972,18 +977,20 @@ input[type='radio'].visually-hidden {
     transition: filter 0.3s;
 }
 
-.registration__popup {
+.popup__modal {
+    display: none;
     position: fixed;
     top: 45%;
-    left: 50%;
-    margin-top: -150px;
-    margin-left: -150px;
-    display: none;
+    left: 36%;
     opacity: 0;
-    z-index: 5;
+    z-index: 100;
+    margin-bottom: 0;
 }
 
 .popup__close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
     display: inline-block;
     width: 20px;
     height: 20px;
@@ -991,9 +998,10 @@ input[type='radio'].visually-hidden {
 
 .popup-close__line {
     display: inline-block;
+    border-radius: 2px;
     width: 3px;
     height: 16px;
-    background: #000;
+    background: rgba(0, 0, 0, 0.8);
 }
 
 .popup-close__line:first-child {
@@ -1017,7 +1025,7 @@ input[type='radio'].visually-hidden {
 }
 
 .popup__overlay {
-    z-index: 3;
+    z-index: 90;
     position: fixed;
     background-color: rgba(0, 0, 0, 0.8);
     width: 100%;
@@ -1025,7 +1033,7 @@ input[type='radio'].visually-hidden {
     top: 0;
     left: 0;
     cursor: pointer;
-    display: block;
+    display: none;
 }
 
 /*----------------------------------------------стили для footer---------------------------------------------------------*/
@@ -1318,14 +1326,17 @@ input[type='radio'].visually-hidden {
 
 @media all and (max-width: 737px) {
 
+    .header-menu__wrap {
+        text-align: left;
+        position: relative;
+    }
+
     .header-menu__hamburger {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-content: space-between;
+        display: inline-block;
         position: relative;
         width: 22px;
-        height: 20px;
+        height: 21px;
+        vertical-align: middle;
     }
 
     .burger-line {
@@ -1335,20 +1346,25 @@ input[type='radio'].visually-hidden {
         width: 100%;
         background-color: #3a5362;
         border-radius: 2px;
+        margin-bottom: 4px;
     }
 
-    .header-menu__hamburger:hover .burger-line:nth-child(2) {
+    .burger-line:last-child {
+        margin-bottom: 0;
+    }
+
+    .burger-line3 {
         display: none;
     }
 
-    .header-menu__hamburger:hover .burger-line:first-child {
+    .burger-line2:first-child {
         position: absolute;
         top: 7px;
         transform: rotate(45deg);
         transition: 0.5s;
     }
 
-    .header-menu__hamburger:hover .burger-line:last-child {
+    .burger-line2:last-child {
         position: absolute;
         top: 7px;
         transform: rotate(-45deg);
@@ -1357,6 +1373,27 @@ input[type='radio'].visually-hidden {
 
     .header-menu__navigation {
         display: none;
+    }
+
+    .header-menu__navigation2 {
+        position: absolute;
+        top: 48px;
+        left: 0;
+        z-index: 10;
+        background: #d7d7d7;
+        width: 100%;
+        text-align: center;
+    }
+
+    .header-menu-list__item2 {
+        display: block;
+    }
+
+    .header-menu__login {
+        margin-right: 0;
+        position: absolute;
+        top: 0;
+        right: 35px;
     }
 
     .services-item__title {
@@ -1586,12 +1623,20 @@ input[type='radio'].visually-hidden {
         padding: 0 10px;
     }
 
+    .header-menu__login {
+        right: 10px;
+    }
+
     .search-property__tabs {
         margin-right: 85px;
     }
 
     .costamer__slider {
         width: 259px;
+    }
+
+    .items__wrap {
+        padding-top: 20px;
     }
 
     .costamer, .company {
