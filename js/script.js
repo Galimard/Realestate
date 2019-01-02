@@ -34,7 +34,7 @@ $(document).ready(function() {
             appendDots: $('.carousel__dots'),
             infinite: true,
             dots: true,
-            // autoplay: true,
+            autoplay: true,
             autoplaySpeed: 3000
         });
     }
