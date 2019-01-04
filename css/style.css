@@ -343,10 +343,6 @@ a {
     margin-top: 10px;
 }
 
-/*.carousel__dots {*/
-    /*height: 18px;*/
-/*}*/
-
 /*----------------------------------------------стили для tabs---------------------------------------------------------*/
 
 .search-property__tabs {
@@ -558,6 +554,18 @@ a {
     height: 32px;
     margin-left: 20px;
     text-align: left;
+    position: relative;
+}
+
+.search__select:before {
+    content: '';
+    display: inline-block;
+    width: 14px;
+    height: 8px;
+    background: url("../img/arrow_up.png") center center no-repeat;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 .search__select-tab2 {

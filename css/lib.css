@@ -1495,7 +1495,43 @@ a {
     height: 32px;
     margin-left: 20px;
     text-align: left;
+    position: relative;
 }
+
+.search__select::before {
+    content: '';
+    display: inline-block;
+    width: 14px;
+    height: 8px;
+    background: url("../img/arrow_up.png") center center no-repeat;
+    position: absolute;
+    top: 8px;
+    right: 5px;
+    z-index: 1;
+    opacity: 1;
+    -webkit-transition: opacity 0.3s ease;
+    -moz-transition: opacity 0.3s ease;
+    -ms-transition: opacity 0.3s ease;
+    -o-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+}
+
+.search__select::after {
+    content: '';
+    display: inline-block;
+    width: 14px;
+    height: 8px;
+    background: url("../img/arrow_down.png") center center no-repeat;
+    position: absolute;
+    top: 18px;
+    right: 5px;
+    z-index: 1;
+}
+
+/*.search__select:hover::before,*/
+/*.search__select:focus::before {*/
+    /*opacity: 0;*/
+/*}*/
 
 .search__select-tab2 {
     margin: 0 20px 0 0;
@@ -1524,7 +1560,7 @@ a {
 
 .btn__span {
     position: relative;
-    z-index: 10;
+    z-index: 1;
 }
 
 .btn::after {
@@ -1670,6 +1706,10 @@ a {
 
 .item-text__wrap:hover::after {
     cursor: pointer;
+}
+
+.item:hover .item-text__wrap::after {
+    background: url("../img/search_orange.png") center center no-repeat;
 }
 
 .item:hover .item__img {
@@ -2375,6 +2415,7 @@ input[type='radio'].visually-hidden {
         z-index: 10;
         background: #d7d7d7;
         width: 100%;
+        height: 0;
         text-align: left;
     }
 

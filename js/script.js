@@ -19,9 +19,9 @@ $(document).ready(function() {
                 display = menu.css('display');
 
             if(display === 'none') {
-                menu.css('display', 'inline-block')
+                menu.css('display', 'inline-block').animate({height: 247}, 'slow');
             } else {
-                menu.css('display', 'none');
+                menu.css('display', 'none').animate({height: 0}, 'slow');
             }
 
             //крестик
@@ -81,8 +81,7 @@ $(document).ready(function() {
     //закрыть
     if($('.popup__overlay') && $('.popup__overlay').length > 0 && $('.popup__close') && $('.popup__close').length > 0) {
         $('.popup__overlay, .popup__close').on('click',  function(){
-            $('.popup__modal')
-                .animate({opacity: 0, top: '45%'}, 200, function(){
+            $('.popup__modal').animate({opacity: 0, top: '45%'}, 200, function(){
                         $(this).css('display', 'none');
                         $('.popup__overlay').fadeOut(400);
                     }
