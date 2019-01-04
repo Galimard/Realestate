@@ -1,3 +1,5 @@
+/*--------------------------------------------------шрифты--------------------------------------------------*/
+
 @font-face {
     font-family: 'ACaslonPro-Regular';
     src: url('../fonts/ACaslonPro-Regular.woff2') format('woff2');
@@ -45,6 +47,9 @@
     font-weight: 400;
     font-style: normal;
 }
+
+/*--------------------------------------------------общие стили, normalize--------------------------------------------------*/
+
 * {
     /*outline: 1px solid red;*/
 }
@@ -78,22 +83,6 @@ li {
 
 a {
     text-decoration: none;
-}
-
-.visually-hidden:not(:focus):not(:active),
-input[type='checkbox'].visually-hidden,
-input[type='radio'].visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    -webkit-clip-path: inset(100%);
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
 }
 
 .content {
@@ -254,11 +243,11 @@ input[type='radio'].visually-hidden {
     font-family: "MicrosoftSansSerif", 'Arial', sans-serif;
     font-size: 1.15rem;
     padding: 15px 0;
-    -webkit-transition: color 0.3s;
-    -moz-transition: color 0.3s;
-    -ms-transition: color 0.3s;
-    -o-transition: color 0.3s;
-    transition: color 0.3s;
+    -webkit-transition: color 0.3s ease;
+    -moz-transition: color 0.3s ease;
+    -ms-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 .header-menu-list__item--active {
@@ -274,8 +263,13 @@ input[type='radio'].visually-hidden {
     margin-right: 20px;
 }
 
-.header-menu-login__slash {
+.header-menu-login__slash::after {
+    content: '/';
     margin-left: 5px;
+}
+
+.header-menu-login__slash:hover::after {
+    color: #3a5362;
 }
 
 .header-menu__link:hover,
@@ -390,7 +384,8 @@ input[type='radio'].visually-hidden {
 }
 
 .tabs__content {
-    display: none;
+    /*display: none;*/
+    opacity: 0;
     position: absolute;
     top: 49px;
     left: 0;
@@ -412,16 +407,23 @@ input[type='radio'].visually-hidden {
 }
 
 .tabs__title-input:checked ~ .tabs__content {
-    display: block;
+    /*display: block;*/
+    opacity: 1;
+    -webkit-transition: opacity 0.3s ease;
+    -moz-transition: opacity 0.3s ease;
+    -ms-transition: opacity 0.3s ease;
+    -o-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
 }
 
 .tabs__title:hover {
+    cursor: pointer;
     border-top: 2px solid #ffa765;
-    -webkit-transition: border-top-color 0.3s;
-    -moz-transition: border-top-color 0.3s;
-    -ms-transition: border-top-color 0.3s;
-    -o-transition: border-top-color 0.3s;
-    transition: border-top-color 0.3s;
+    -webkit-transition: border-top-color 0.3s ease;
+    -moz-transition: border-top-color 0.3s ease;
+    -ms-transition: border-top-color 0.3s ease;
+    -o-transition: border-top-color 0.3s ease;
+    transition: border-top-color 0.3s ease;
 }
 
 .tabs-content__text {
@@ -458,38 +460,38 @@ input[type='radio'].visually-hidden {
 
 .search__input:focus::-webkit-input-placeholder {
     opacity:0;
-    -webkit-transition: opacity 0.5s;
-    -moz-transition: opacity 0.5s;
-    -ms-transition: opacity 0.5s;
-    -o-transition: opacity 0.5s;
-    transition: opacity 0.5s;
+    -webkit-transition: opacity 0.5s ease;
+    -moz-transition: opacity 0.5s ease;
+    -ms-transition: opacity 0.5s ease;
+    -o-transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease;
 }
 
 .search__input:focus:-moz-placeholder {
     opacity:0;
-    -webkit-transition: opacity 0.5s;
-    -moz-transition: opacity 0.5s;
-    -ms-transition: opacity 0.5s;
-    -o-transition: opacity 0.5s;
-    transition: opacity 0.5s;
+    -webkit-transition: opacity 0.5s ease;
+    -moz-transition: opacity 0.5s ease;
+    -ms-transition: opacity 0.5s ease;
+    -o-transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease;
 }
 
 .search__input:focus::-moz-placeholder {
     opacity:0;
-    -webkit-transition: opacity 0.5s;
-    -moz-transition: opacity 0.5s;
-    -ms-transition: opacity 0.5s;
-    -o-transition: opacity 0.5s;
-    transition: opacity 0.5s;
+    -webkit-transition: opacity 0.5s ease;
+    -moz-transition: opacity 0.5s ease;
+    -ms-transition: opacity 0.5s ease;
+    -o-transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease;
 }
 
 .search__input:focus:-ms-input-placeholder {
     opacity:0;
-    -webkit-transition: opacity 0.5s;
-    -moz-transition: opacity 0.5s;
-    -ms-transition: opacity 0.5s;
-    -o-transition: opacity 0.5s;
-    transition: opacity 0.5s;
+    -webkit-transition: opacity 0.5s ease;
+    -moz-transition: opacity 0.5s ease;
+    -ms-transition: opacity 0.5s ease;
+    -o-transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease;
 }
 
 .search-property__slider {
@@ -542,6 +544,7 @@ input[type='radio'].visually-hidden {
 
 .search-select__row {
     margin-top: 15px;
+    z-index: 11;
 }
 
 .search-select__text {
@@ -596,17 +599,21 @@ input[type='radio'].visually-hidden {
     border: 3px solid #d7d7d7;
     background-image: linear-gradient(to top, #ff6e02 0%, #ffa765 100%);
     opacity: 0;
-    -webkit-transition: opacity 0.3s;
-    -moz-transition: opacity 0.3s;
-    -ms-transition: opacity 0.3s;
-    -o-transition: opacity 0.3s;
-    transition: opacity 0.3s;
+    -webkit-transition: opacity 0.3s ease;
+    -moz-transition: opacity 0.3s ease;
+    -ms-transition: opacity 0.3s ease;
+    -o-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
 }
 
 .search-select__btn::after {
     top: -2px;
     left: -2px;
     border-radius: 10px;
+}
+
+.btn:hover {
+    cursor: pointer;
 }
 
 .search-select__btn:hover {
@@ -735,11 +742,20 @@ input[type='radio'].visually-hidden {
     -ms-transform: scale(1.1);
     -o-transform: scale(1.1);
     transform: scale(1.1);
-    -webkit-transition: transform 0.3s;
-    -moz-transition: transform 0.3s;
-    -ms-transition: transform 0.3s;
-    -o-transition: transform 0.3s;
-    transition: transform 0.3s;
+    -webkit-transition: transform 0.3s ease;
+    -moz-transition: transform 0.3s ease;
+    -ms-transition: transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+    transition: transform 0.3s ease;
+}
+
+.item:hover .item-text__wrap {
+    color: #ff7108;
+    -webkit-transition: color 0.3s ease;
+    -moz-transition: color 0.3s ease;
+    -ms-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 /*----------------------------------------------стили для registration---------------------------------------------------------*/
@@ -830,38 +846,38 @@ input[type='radio'].visually-hidden {
 
 .registration-form__input:focus::-webkit-input-placeholder {
     opacity:0;
-    -webkit-transition: opacity 0.5s;
-    -moz-transition: opacity 0.5s;
-    -ms-transition: opacity 0.5s;
-    -o-transition: opacity 0.5s;
-    transition: opacity 0.5s;
+    -webkit-transition: opacity 0.5s ease;
+    -moz-transition: opacity 0.5s ease;
+    -ms-transition: opacity 0.5s ease;
+    -o-transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease;
 }
 
 .registration-form__input:focus:-moz-placeholder {
     opacity:0;
-    -webkit-transition: opacity 0.5s;
-    -moz-transition: opacity 0.5s;
-    -ms-transition: opacity 0.5s;
-    -o-transition: opacity 0.5s;
-    transition: opacity 0.5s;
+    -webkit-transition: opacity 0.5s ease;
+    -moz-transition: opacity 0.5s ease;
+    -ms-transition: opacity 0.5s ease;
+    -o-transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease;
 }
 
 .registration-form__input:focus::-moz-placeholder {
     opacity:0;
-    -webkit-transition: opacity 0.5s;
-    -moz-transition: opacity 0.5s;
-    -ms-transition: opacity 0.5s;
-    -o-transition: opacity 0.5s;
-    transition: opacity 0.5s;
+    -webkit-transition: opacity 0.5s ease;
+    -moz-transition: opacity 0.5s ease;
+    -ms-transition: opacity 0.5s ease;
+    -o-transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease;
 }
 
 .registration-form__input:focus:-ms-input-placeholder {
     opacity:0;
-    -webkit-transition: opacity 0.5s;
-    -moz-transition: opacity 0.5s;
-    -ms-transition: opacity 0.5s;
-    -o-transition: opacity 0.5s;
-    transition: opacity 0.5s;
+    -webkit-transition: opacity 0.5s ease;
+    -moz-transition: opacity 0.5s ease;
+    -ms-transition: opacity 0.5s ease;
+    -o-transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease;
 }
 
 .registration-form__btn {
@@ -970,11 +986,11 @@ input[type='radio'].visually-hidden {
 .registration-icons__link:hover {
     -webkit-filter: drop-shadow(0 0 3px #ffa25b);
     filter: drop-shadow(0 0 3px #ffa25b);
-    -webkit-transition: filter 0.3s;
-    -moz-transition: filter 0.3s;
-    -ms-transition: filter 0.3s;
-    -o-transition: filter 0.3s;
-    transition: filter 0.3s;
+    -webkit-transition: filter 0.3s ease;
+    -moz-transition: filter 0.3s ease;
+    -ms-transition: filter 0.3s ease;
+    -o-transition: filter 0.3s ease;
+    transition: filter 0.3s ease;
 }
 
 .popup__modal {
@@ -1203,6 +1219,32 @@ input[type='radio'].visually-hidden {
     font-weight: 400;
 }
 
+.search__input:focus {
+    border: 3px solid #d7d7d7;
+    border-radius: 8px;
+}
+
+.registration-form__input:focus {
+    border: 3px solid #d7d7d7;
+    border-radius: 5px;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type='checkbox'].visually-hidden,
+input[type='radio'].visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    -webkit-clip-path: inset(100%);
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
 /*---------------------------------------------------------адаптив-------------------------------------------------*/
 
 @media all and (max-width: 1020px) {
@@ -1238,6 +1280,7 @@ input[type='radio'].visually-hidden {
     .registration__wrap {
         max-width: 645px;
         text-align: center;
+        padding: 30px;
     }
 
     .registration__signup {
@@ -1260,7 +1303,7 @@ input[type='radio'].visually-hidden {
 
     .search-property__wrap {
         text-align: center;
-        height: 786px;
+        height: 810px;
     }
 
     .search-property__tabs {
@@ -1297,6 +1340,7 @@ input[type='radio'].visually-hidden {
 
     .items__wrap {
         max-width: 468px;
+        padding: 30px;
     }
 
     .item:nth-child(4n) {
@@ -1361,14 +1405,22 @@ input[type='radio'].visually-hidden {
         position: absolute;
         top: 7px;
         transform: rotate(45deg);
-        transition: 0.5s;
+        -webkit-transition: transform 0.5s ease;
+        -moz-transition: transform 0.5s ease;
+        -ms-transition: transform 0.5s ease;
+        -o-transition: transform 0.5s ease;
+        transition: transform 0.5s ease;
     }
 
     .burger-line2:last-child {
         position: absolute;
         top: 7px;
         transform: rotate(-45deg);
-        transition: 0.5s;
+        -webkit-transition: transform 0.5s ease;
+        -moz-transition: transform 0.5s ease;
+        -ms-transition: transform 0.5s ease;
+        -o-transition: transform 0.5s ease;
+        transition: transform 0.5s ease;
     }
 
     .header-menu__navigation {
@@ -1486,6 +1538,10 @@ input[type='radio'].visually-hidden {
 
 @media all and (max-width: 528px) {
 
+    .items__wrap {
+        padding: 30px 10px;
+    }
+
     .item {
         margin: 0 0 20px 0;
     }
@@ -1493,6 +1549,11 @@ input[type='radio'].visually-hidden {
     .item:nth-child(3n) {
         margin-right: 0;
     }
+
+    .item:nth-child(odd) {
+        margin-right: 10px;
+    }
+
     .registration__member, .registration__subscribe {
         max-width: 470px;
         min-height: 109px;
@@ -1534,6 +1595,7 @@ input[type='radio'].visually-hidden {
 
     .search__input {
         width: 260px;
+        height: 34px;
     }
 
     .search__checkbox-text {
@@ -1666,6 +1728,10 @@ input[type='radio'].visually-hidden {
 
     .search-property__tabs {
         margin-right: 85px;
+    }
+
+    .search__input {
+        margin-bottom: 15px;
     }
 
     .costamer__slider {

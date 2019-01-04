@@ -57,6 +57,11 @@
 .slick-next:focus:before
 {
     opacity: 0.7;
+    -webkit-transition: opacity 0.3s ease;
+    -moz-transition: opacity 0.3s ease;
+    -ms-transition: opacity 0.3s ease;
+    -o-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
 }
 .slick-prev.slick-disabled:before,
 .slick-next.slick-disabled:before
