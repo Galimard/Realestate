@@ -46,7 +46,9 @@ $(document).ready(function() {
     //плавное появление табов
     if($('.tabs__title') && $('.tabs__title').length > 0) {
         $('.tabs__title').on('click', function () {
-            $('.tabs__content').fadeIn('slow');
+            $(this.siblings('.tabs__content')).fadeIn('slow');
+            // $('.tabs__content').fadeOut('slow');
+
         });
     }
 
