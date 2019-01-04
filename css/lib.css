@@ -1300,14 +1300,14 @@ a {
 }
 
 .tabs__content {
-    display: none;
-    /*opacity: 0;*/
+    display: block;
+    opacity: 0;
     position: absolute;
     top: 49px;
     left: 0;
     padding: 20px 40px;
     width: 420px;
-    height: 336px;
+    height: 340px;
     border-radius: 0 15px 0 0;
     overflow-y: auto;
     background: linear-gradient(to bottom, #60a4ce, transparent);
@@ -1315,6 +1315,7 @@ a {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     font-family: 'ArialMT', 'Arial', sans-serif;
+    z-index: 0;
 }
 
 .tabs__title-input:checked + .tabs__title {
@@ -1323,13 +1324,13 @@ a {
 }
 
 .tabs__title-input:checked ~ .tabs__content {
-    display: block;
-    /*opacity: 1;*/
-    /*-webkit-transition: opacity 0.3s ease;*/
-    /*-moz-transition: opacity 0.3s ease;*/
-    /*-ms-transition: opacity 0.3s ease;*/
-    /*-o-transition: opacity 0.3s ease;*/
-    /*transition: opacity 0.3s ease;*/
+    z-index: 1;
+    opacity: 1;
+    -webkit-transition: opacity 0.3s ease;
+    -moz-transition: opacity 0.3s ease;
+    -ms-transition: opacity 0.3s ease;
+    -o-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
 }
 
 .tabs__title:hover {
@@ -1509,6 +1510,10 @@ a {
     right: 5px;
     z-index: 1;
     opacity: 1;
+}
+
+.search__select--active::before {
+    opacity: 0;
     -webkit-transition: opacity 0.3s ease;
     -moz-transition: opacity 0.3s ease;
     -ms-transition: opacity 0.3s ease;

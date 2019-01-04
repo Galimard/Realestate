@@ -44,17 +44,20 @@ $(document).ready(function() {
     }
 
     //плавное появление табов
-    if($('.tabs__title') && $('.tabs__title').length > 0) {
-        $('.tabs__title').on('click', function () {
-            $(this.siblings('.tabs__content')).fadeIn('slow');
-            // $('.tabs__content').fadeOut('slow');
-
-        });
-    }
+    // if($('.tabs__title') && $('.tabs__title').length > 0) {
+    //     $('.tabs__title').on('click', function () {
+    //         $('.tabs__content').fadeIn('slow');
+    //
+    //     });
+    // }
 
     //кастомищация селектов
     if($('.search__select') && $('.search__select').length > 0) {
         $('.search__select').styler();
+
+        $('.search__select').on('click', function(){
+            $(this).toggleClass('search__select--active');
+        });
     }
 
     //слайдер в футере
