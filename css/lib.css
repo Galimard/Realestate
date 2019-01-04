@@ -1307,7 +1307,7 @@ a {
     left: 0;
     padding: 20px 40px;
     width: 420px;
-    height: 335px;
+    height: 336px;
     border-radius: 0 15px 0 0;
     overflow-y: auto;
     background: linear-gradient(to bottom, #60a4ce, transparent);
@@ -2230,6 +2230,10 @@ input[type='radio'].visually-hidden {
         text-align: left;
     }
 
+    .registration-icons__link {
+        opacity: 1;
+    }
+
 }
 
 @media all and (max-width: 993px) {
@@ -2529,7 +2533,7 @@ input[type='radio'].visually-hidden {
     .tabs__content {
         width: 300px;
         top: 40px;
-        padding: 10px 20px;
+        padding: 15px 20px;
     }
 
     .search-property__wrap {
@@ -2606,6 +2610,10 @@ input[type='radio'].visually-hidden {
     .carousel, .slick-track {
         width: 300px;
         height: 255px;
+    }
+
+    .item:nth-child(2n+1) {
+        margin-right: 0;
     }
 
     .registration__member, .registration__subscribe {
@@ -2707,4 +2715,64 @@ input[type='radio'].visually-hidden {
     }
 }
 
-@media all and (max-width: 280px)
+@media all and (max-width: 320px) {
+
+    .carousel, .slick-track {
+        width: 250px;
+        height: 230px;
+    }
+
+    .search-property__tabs {
+        margin-right: 55px;
+    }
+
+    .tabs__title {
+        padding: 10px 14px;
+    }
+
+    .tabs__content {
+        width: 250px;
+    }
+
+    .search__input {
+        width: 205px;
+        padding-right: 10px;
+    }
+
+    .search-select__wrap {
+        text-align: left;
+    }
+
+    .search__select {
+        margin-left: 0;
+    }
+
+    .registration__member, .registration__subscribe {
+        max-width: 260px;
+    }
+
+    .registration__subscribe {
+        min-height: 151px;
+    }
+
+    .registration-form-input__email {
+        width: 213px;
+    }
+
+    .registration-form__btn {
+        margin: 0 56px;
+    }
+
+    .registration__signup {
+        width: 260px;
+        padding: 10px 15px;
+    }
+
+    .registration__signup::before {
+        right: 0;
+    }
+
+    .registration__signup::after {
+        right: -58px;
+    }
+}
